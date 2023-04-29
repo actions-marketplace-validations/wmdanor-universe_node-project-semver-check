@@ -1,0 +1,31 @@
+name: 'Node.js Project Semantic Version Check'
+description: 'Check Node.js project semantic version'
+author: 'wmdanor'
+inputs:
+  token:
+    description: 'GutHub Token'
+    required: true
+  package-json-path:
+    description: 'Path to package.json file'
+    required: true
+    default: 'package.json'
+  main-branch-name:
+    description: 'Main branch name'
+    required: true
+    default: 'main'
+outputs:
+  thisBranchInitialVersion:
+    description: 'This branch initial version (it is Version object { value, major, minor, patch, build, prerelease } ). Use like: ${{ steps.checkVersion.outputs["thisBranchInitialVersion.value"] }}'
+  thisBranchCurrentVersion:
+    description: 'This branch current version (it is Version object)'
+  mainBranchCurrentVersion:
+    description: 'Main branch current version (it is Version object)'
+  hasChanged:
+    description: 'True if (thisBranchCurrentVersion !== thisBranchInitialVersion)'
+  isValid:
+    description: 'Valid if (thisBranchCurrentVersion > thisBranchInitialVersion &&  thisBranchCurrentVersion > mainBranchCurrentVersion)'
+  errors:
+    description: 'Validation errors'
+runs:
+  using: 'node16'
+  main: 'dist/action/run.js'

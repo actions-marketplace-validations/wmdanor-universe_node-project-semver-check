@@ -1,0 +1,22 @@
+env:
+  node: true
+parser: '@typescript-eslint/parser'
+parserOptions:
+  ecmaVersion: 6
+plugins:
+  - '@typescript-eslint'
+  - 'prettier'
+  - 'eslint-plugin-prettier'
+extends:
+  - 'eslint:recommended'
+  - 'plugin:@typescript-eslint/recommended'
+  - 'plugin:prettier/recommended'
+rules:
+  'prettier/prettier':
+    - "error"
+    - {}
+    - { usePrettierrc: true }
+  'no-constant-condition': 'off'
+ignorePatterns:
+  - 'node_modules'
+  - 'dist'

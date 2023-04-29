@@ -1,0 +1,12 @@
+{
+  "exclude": ["_template.ts$", ".test.ts$"],
+  "jsc": {
+    "parser": {
+      "syntax": "typescript"
+    },
+    "target": "es2015"
+  },
+  "module": {
+    "type": "commonjs"
+  }
+}
