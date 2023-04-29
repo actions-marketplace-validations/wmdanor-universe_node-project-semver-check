@@ -28,4 +28,4 @@ outputs:
     description: 'Validation errors'
 runs:
   using: 'node16'
-  main: 'dist/action/run.js'
+  main: 'dist/index.js'
