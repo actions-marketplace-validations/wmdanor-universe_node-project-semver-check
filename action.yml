@@ -15,7 +15,7 @@ inputs:
     default: 'main'
 outputs:
   thisBranchInitialVersion:
-    description: 'This branch initial version (it is Version object { value, major, minor, patch, build, prerelease } ). Use like: ${{ steps.checkVersion.outputs["thisBranchInitialVersion.value"] }}'
+    description: 'This branch initial version (it is Version object { value, major, minor, patch, build, prerelease } ). Use like: steps.checkVersion.outputs["thisBranchInitialVersion.value"]'
   thisBranchCurrentVersion:
     description: 'This branch current version (it is Version object)'
   mainBranchCurrentVersion:
