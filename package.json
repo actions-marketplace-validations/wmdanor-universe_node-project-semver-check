@@ -1,6 +1,6 @@
 {
   "name": "node-project-semver-check",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "GitHub Action for checking Node.js project semantic version",
   "author": "wmdanor",
   "license": "Apache-2.0",
